@@ -398,4 +398,71 @@ git push origin main
 
 J'ai créé un tag nommé "séance2", que j'ai ensuite poussé avec le message "version finie séance 2".
 
+**1.**
+```
+git tag -a séance2 -m "version finie séance 2"
+```
+
+**2.** Vérifier que le tag a été créé :
+```
+git tag -l
+```
+
+**3.** Pousser le tag vers le dépôt distant :
+```
+git push origin séance2
+```
+
+
+## Miniprojet
+### Exercices 1 et 2
+
+**1.** Pourquoi ne pas utiliser `cat` ?
+
+Utiliser `cat` pour lire un fichier ligne par ligne est moins optimal dans ce cas. En utilisant `while read -r line; do ... done < "fichier"`, on lit le fichier ligne par ligne sans lancer de sous-processus supplémentaire. Cela rend le script plus performant et réduit l'usage de mémoire par rapport à `cat`, car on n'a pas besoin de lire tout le fichier dans un flux unique.
+
+**2.** Comment transformer `"urls/fr.txt"` en paramètre du script ?
+
+Pour transformer `"urls/fr.txt"` en paramètre, il suffit de passer le nom du fichier comme argument au script, et de le récupérer dans une variable.
+
++ `if [ "$#" -ne 1 ];` : On vérifie si le nombre d'arguments (`$#`) est égal à 1. Sinon, un message d'erreur s'affiche et le script s'arrête avec `exit 1`.
++ `fichier="$1"` : `$1` contient le premier argument passé au script. Ici, c'est le fichier d'URLs.
++ **Compteur de ligne** : La variable `ligne_num` commence à 1 et s'incrémente de 1 à chaque ligne pour afficher le numéro de ligne.
++ `-e` dans `echo` : Cela permet de traiter `\t` comme une tabulation.
+
+**3.** Comment afficher le numéro de ligne avant chaque URL (sur la même ligne) avec des tabulations ?
+
+Le script `miniprojet.sh` affiche le numéro de ligne avant chaque URL, séparé par une tabulation (`\t`). Cette fonctionnalité est réalisée en utilisant la commande `echo -e "${ligne_num}\t${line}"`. L'utilisation de la tabulation garantit que les différentes colonnes (numéro de ligne et URL) seront bien séparées lorsque le résultat est affiché.
+
+Pour rendre le script exécutable, je lui ai donné les bonnes permissions d'exécution avec :
+```
+chmod +x programmes/miniprojet.sh
+```
+
+On peut exécuter le script en passant le fichier d'URLs en argument, comme suit :
+```
+bash miniprojet.sh urls/fr.txt
+```
+Sinon, on peut aussi exécuter le script en utilisant le chemin relatif depuis le répertoire `miniprojet` :
+```
+bash programmes/miniprojet.sh urls/fr.txt
+```
++ Cela suppose qu'on se trouve déjà dans le répertoire où se trouve le script, c'est-à-dire dans le dossier `miniprojet`.
+
+
+J'ai exécuté mon script en utilisant la commande suivante :
+```
+./programmes/miniprojet.sh urls/fr.txt
+```
++ J'ai spécifié le chemin relatif vers mon script `miniprojet.sh`, situé dans le dossier `programmes` de mon `miniprojet`.
++ Les deux approches sont valides, l'une utilisant `bash` et l'autre l'exécution directe du script avec `./` (le point indique le répertoire actuel).
+
+#### Résumé des fonctionnalités
+Ce script :
+
++ Accepte un fichier d'URLs en argument.
++ Valide la présence de cet argument.
++ Affiche chaque URL avec son numéro de ligne, séparées par une tabulation.
+
+
 
