@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'> <!-- Définit l'encodage de la page en UTF-8 -->
+    <title>Tableau des URLs</title>
+    <style>
+        /* Styles appliqués au corps de la page */
+        body {
+            font-family: Arial, sans-serif; /* Police claire et standard */
+            margin: 20px; /* Espacement autour du contenu */
+            background-color: #f9f9f9; /* Couleur de fond gris clair pour un aspect doux */
+            color: #333; /* Texte en gris foncé pour un bon contraste */
+        }
+
+        /* Styles pour le titre principal (h1) */
+        h1 {
+            text-align: center; /* Titre centré */
+            color: #ed286d; /* Couleur rose vif pour attirer l'attention */
+        }
+
+        /* Styles pour la table */
+        table {
+            width: 100%; /* Table sur toute la largeur */
+            border-collapse: collapse; /* Fusionne les bordures adjacentes */
+            margin: 20px 0; /* Espace vertical autour de la table */
+            font-size: 18px; /* Taille de texte confortable */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère pour un effet de profondeur */
+        }
+
+        /* Styles appliqués aux cellules des en-têtes (th) et du contenu (td) */
+        th, td {
+            border: 1px solid #ddd; /* Bordure grise autour de chaque cellule */
+            padding: 12px; /* Espacement interne pour rendre le contenu plus lisible */
+            text-align: center; /* Contenu centré */
+        }
+
+        /* Styles spécifiques aux en-têtes de colonnes */
+        th {
+            background-color: #ed286d; /* Fond rose pour démarquer les en-têtes */
+            color: white; /* Texte blanc pour contraster avec le fond */
+        }
+
+        /* Styles pour les lignes paires du tableau */
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Fond gris clair pour une alternance visuelle */
+        }
+
+        /* Styles pour l'effet au survol des lignes */
+        tr:hover {
+            background-color: #ddd; /* Fond gris plus foncé lorsqu'une ligne est survolée pour améliorer la lisibilité et l'esthétique */
+        }
+
+        /* Styles pour les liens hypertexte dans les cellules */
+        td a {
+            color: #2196F3; /* Bleu standard pour les liens */
+            text-decoration: none; /* Supprime le soulignement par défaut */
+        }
+
+        /* Style des liens lorsqu'ils sont survolés */
+        td a:hover {
+            text-decoration: underline; /* Ajoute un soulignement au survol pour indiquer une interaction */
+        }
+    </style>
+</head>
+<body>
+    <!-- Titre principal de la page -->
+    <h1>Tableau des données récupérées</h1>
+    <!-- Début du tableau -->
+    <table>
+        <thead>
+            <tr>
+                <th>Numéro</th> <!-- Numéro de la ligne -->
+                <th>Nom du Site</th> <!-- Nom extrait de l'URL -->
+                <th>URL</th> <!-- Adresse URL -->
+                <th>Code HTTP</th> <!-- Statut HTTP -->
+                <th>Encodage</th> <!-- Type d'encodage de la page -->
+                <th>Nombre de mots</th> <!-- Nombre total de mots sur la page -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td> <!-- Numéro de la ligne -->
+                <td>fr.wikipedia.org</td> <!-- Nom du site -->
+                <td><a href="https://fr.wikipedia.org/wiki/Robot">https://fr.wikipedia.org/wiki/Robot</a></td> <!-- URL cliquable -->
+                <td>200</td> <!-- Code HTTP -->
+                <td>UTF-8</td> <!-- Encodage -->
+                <td>   15754</td> <!-- Nombre de mots -->
+            </tr>
+            <tr>
+                <td>2</td> <!-- Numéro de la ligne -->
+                <td>fr.wikipedia.org</td> <!-- Nom du site -->
+                <td><a href="https://fr.wikipedia.org/wiki/Robot_de_cuisine">https://fr.wikipedia.org/wiki/Robot_de_cuisine</a></td> <!-- URL cliquable -->
+                <td>200</td> <!-- Code HTTP -->
+                <td>UTF-8</td> <!-- Encodage -->
+                <td>    3906</td> <!-- Nombre de mots -->
+            </tr>
+            <tr>
+                <td>3</td> <!-- Numéro de la ligne -->
+                <td>fr.wikipedia.org</td> <!-- Nom du site -->
+                <td><a href="https://fr.wikipedia.org/wiki/Bot_informatique">https://fr.wikipedia.org/wiki/Bot_informatique</a></td> <!-- URL cliquable -->
+                <td>200</td> <!-- Code HTTP -->
+                <td>UTF-8</td> <!-- Encodage -->
+                <td>    5812</td> <!-- Nombre de mots -->
+            </tr>
+            <tr>
+                <td>4</td> <!-- Numéro de la ligne -->
+                <td>fr.wikipedia.org</td> <!-- Nom du site -->
+                <td><a href="https://fr.wikipedia.org/wiki/Atlas_(robot)">https://fr.wikipedia.org/wiki/Atlas_(robot)</a></td> <!-- URL cliquable -->
+                <td>200</td> <!-- Code HTTP -->
+                <td>UTF-8</td> <!-- Encodage -->
+                <td>    3753</td> <!-- Nombre de mots -->
+            </tr>
+            <tr>
+                <td>5</td> <!-- Numéro de la ligne -->
+                <td>roboty.magistry.fr</td> <!-- Nom du site -->
+                <td><a href="https://roboty.magistry.fr">https://roboty.magistry.fr</a></td> <!-- URL cliquable -->
+                <td>200</td> <!-- Code HTTP -->
+                <td>N/A</td> <!-- Encodage -->
+                <td>     166</td> <!-- Nombre de mots -->
+            </tr>
+            <tr>
+                <td>6</td> <!-- Numéro de la ligne -->
+                <td>fr.wikipedia.org</td> <!-- Nom du site -->
+                <td><a href="https://fr.wikipedia.org/wiki/Robot_(Leonard_de_Vinci)">https://fr.wikipedia.org/wiki/Robot_(Leonard_de_Vinci)</a></td> <!-- URL cliquable -->
+                <td>404</td> <!-- Code HTTP -->
+                <td>UTF-8</td> <!-- Encodage -->
+                <td>    2107</td> <!-- Nombre de mots -->
+            </tr>
+            <tr>
+                <td>7</td> <!-- Numéro de la ligne -->
+                <td>fr.wiktionary.org</td> <!-- Nom du site -->
+                <td><a href="https://fr.wiktionary.org/wiki/robot">https://fr.wiktionary.org/wiki/robot</a></td> <!-- URL cliquable -->
+                <td>200</td> <!-- Code HTTP -->
+                <td>UTF-8</td> <!-- Encodage -->
+                <td>   12251</td> <!-- Nombre de mots -->
+            </tr>
+            <tr>
+                <td>8</td> <!-- Numéro de la ligne -->
+                <td>fr.wikipedia.org</td> <!-- Nom du site -->
+                <td><a href="https://fr.wikipedia.org/wiki/Protocole_d%27exclusion_des_robots">https://fr.wikipedia.org/wiki/Protocole_d%27exclusion_des_robots</a></td> <!-- URL cliquable -->
+                <td>200</td> <!-- Code HTTP -->
+                <td>UTF-8</td> <!-- Encodage -->
+                <td>    3971</td> <!-- Nombre de mots -->
+            </tr>
+            <tr>
+                <td>9</td> <!-- Numéro de la ligne -->
+                <td>fr.wikipedia.org</td> <!-- Nom du site -->
+                <td><a href="https://fr.wikipedia.org/wiki/Robotique">https://fr.wikipedia.org/wiki/Robotique</a></td> <!-- URL cliquable -->
+                <td>200</td> <!-- Code HTTP -->
+                <td>UTF-8</td> <!-- Encodage -->
+                <td>   21802</td> <!-- Nombre de mots -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
