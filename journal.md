@@ -415,7 +415,8 @@ git push origin séance2
 
 
 ## Miniprojet
-### Exercices 1 et 2
+### Exercices 1 et 2 
+#### Partie 1 du mini-projet
 
 **1.** Pourquoi ne pas utiliser `cat` ?
 
@@ -463,6 +464,93 @@ Ce script :
 + Accepte un fichier d'URLs en argument.
 + Valide la présence de cet argument.
 + Affiche chaque URL avec son numéro de ligne, séparées par une tabulation.
+
+  **Arborescence** du projet
+
+  Voici l'arborescence actuelle des fichiers :
+
+  PPE1-2024
+  ├── journal.md
+  ├── miniprojet/
+  │   ├── programmes/
+  │   │   └── miniprojet.sh
+  │   ├── urls/
+  │   │   └── fr.txt
+  │   ├── tableaux/
+  │   │   └── tableau-fr.tsv
+  ├── .git/
+  ├── .gitignore
+  └── README.md
+
+
+J'ai ajouté un tag `miniprojet-1` pour marquer la fin de cette étape de travail.
+Cela me permet de suivre les progrès du projet et de revenir à ce point si nécessaire.
+___________________________________________________________________________________________________________________________________________________
+
+### Exercice 3 
+#### Partie 2 du mini-projet
+
+##### Modifications apportées au script `miniprojet.sh`
+
+J'ai mis à jour le script `miniprojet.sh` pour effectuer les tâches suivantes :
+
+**1.  Suppression du fichier `tableau-fr.tsv` localement** :
+```
+rm tableaux/tableau-fr.tsv
+```
+Le fichier `tableau-fr.tsv` a été supprimé du projet, car il n'était plus nécessaire pour la génération des résultats. Il a été remplacé par un fichier HTML, `tableau-fr.html`, qui présente les informations dans un format plus lisible.
+
+**2. Génération d'un fichier HTML** :
+Le script crée désormais un fichier HTML dans lequel un tableau présente les informations extraites des URLs fournies dans le fichier `fr.txt`. Pour chaque URL, le script récupère :
+
+- Le nom du site
+- Le code HTTP (statut de la page)
+- L'encodage du contenu de la page
+- Le nombre de mots présents dans la page
+Ce fichier HTML est placé dans le dossier `tableaux/` sous le nom `tableau-fr.html`. Il est également formaté avec du CSS pour une meilleure présentation visuelle.
+
+**3. Mise à jour de la gestion des erreurs** :
+Le script gère désormais les erreurs de manière plus robuste. En cas d'URL inaccessible, le code HTTP est affiché sous forme de "000", et les champs d'encodage et de nombre de mots sont renseignés avec "N/A". De plus, le script ignore les lignes vides ou les URLs mal formées.
+
+**4. Utilisation de `curl` pour récupérer les informations** :
+Le script utilise des commandes `curl` pour récupérer les informations liées à l'encodage et au code HTTP des pages. Le nombre de mots sur chaque page est obtenu grâce à la commande `wc -w`.
+
+**5. Création automatique du dossier `tableaux`** :
+Si le dossier `tableaux` n'existe pas déjà, il est créé automatiquement avant la génération du fichier HTML.
+
+
+J'ai exécuté mon script en utilisant la commande suivante :
+```
+bash programmes/miniprojet.sh urls/fr.txt
+```
+
+  **Arborescence** du projet
+
+  Voici l'arborescence actuelle des fichiers :
+
+
+  PPE1-2024
+  ├── journal.md
+  ├── miniprojet/
+  │   ├── programmes/
+  │   │   └── miniprojet.sh
+  │   ├── urls/
+  │   │   └── fr.txt
+  │   ├── tableaux/
+  │   │   └── tableau-fr.html
+  ├── .git/
+  ├── .gitignore
+  └── README.md
+
+
+J'ai ajouté un tag `miniprojet-2` pour marquer la fin de cette étape de travail.
+Ce tag marque l'achèvement des modifications liées à la génération du fichier HTML à partir des URLs fournies.
+
+
+
+
+
+
 
 
 
