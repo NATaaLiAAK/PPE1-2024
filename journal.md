@@ -555,8 +555,51 @@ bash programmes/miniprojet.sh urls/fr.txt
 J'ai ajouté un tag `miniprojet-2` pour marquer la fin de cette étape de travail.
 Ce tag marque l'achèvement des modifications liées à la génération du fichier HTML à partir des URLs fournies.
 
+___________________________________________________________________________________________________________________________________________________
 
+### Exercice 4 
+#### Partie 3 du mini-projet
 
+##### Création d'une page HTML pour présenter le mini-projet et guider vers le tableau de résultats 
+
+Dans cette troisième partie du mini-projet, j'ai créé une page **HTML** qui présente le projet et fournit un lien vers le tableau comparatif des mots. La page a été conçue avec **Bulma**, un framework CSS, pour assurer un design simple et réactif.
+
+La page comporte plusieurs sections :
+  - **Une barre de navigation** : Elle permet de donner un titre à la page avec un icône à côté du nom du projet.
+  - **Une section héro** : Cette section présente une introduction au projet, avec un texte expliquant brièvement l'objectif de l'étude multilingue.
+  - **Un bouton** : Il permet aux utilisateurs d'accéder au tableau de résultats, où ils peuvent consulter les comparaisons des mots dans différentes langues.
+
+Le fichier HTML créé a été ajouté au dépôt et est maintenant disponible dans le dossier racine du projet sous le nom `index.html`.
+
+**Arborescence** du projet
+
+  Voici l'arborescence actuelle des fichiers :
+
+```
+
+  PPE1-2024
+  ├── journal.md
+  ├── index.html
+  ├── miniprojet/
+  │   ├── programmes/
+  │   │   └── miniprojet.sh
+  │   ├── urls/
+  │   │   └── fr.txt
+  │   ├── tableaux/
+  │   │   └── tableau-fr.html
+  ├── .git/
+  ├── .gitignore
+  └── README.md
+
+```
+
+De plus, j'ai configuré la fonctionnalité `GitHub Pages` pour déployer cette page en ligne. Ainsi, le projet est désormais accessible via un site web public à l'adresse suivante :
+
+[https://nataaliaak.github.io/PPE1-2024/](https://nataaliaak.github.io/PPE1-2024/)
+
+Cela permet à quiconque de consulter le projet directement depuis leur navigateur.
+
+J'ai ajouté un tag `miniprojet-3` pour marquer la fin de cette étape de travail.
 
 
 
